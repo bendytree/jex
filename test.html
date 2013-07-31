@@ -1,0 +1,47 @@
+
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+<script src='jex.js'></script>
+
+<span id='raw-button'>Raw</span>
+<span id='jex-on-button'>Jex-ON</span>
+<span id='jex-click-button'>Jex-CLICK</span>
+
+
+<script>
+	
+	jex.config({
+		context: function(){
+			return "ABCDEFG";
+		}
+	});
+	
+	// setTimeout(function(){
+	// 	console.log('\n\n\nanonymous-timeout:');
+	// 	var x=null;x.silly;
+	// }, 200);
+	// 
+	// setTimeout(function MyTimeout(){
+	// 	console.log('\n\n\nnamed-timeout:');
+	// 	var x=null;x.silly;
+	// }, 300);
+	// 
+	// jex.do(function(){
+	// 	console.log('\n\n\nin-do:');
+	// 	var x=null;x.silly;
+	// });
+	
+	$("#jex-on-button").on('click', function JexHandler(){
+		console.log('\n\njex-on:');
+		var x=null;x.silly;		
+	});
+	
+	$("#jex-click-button").click(function JexHandler(){
+		console.log('\n\njex-click:');
+		var x=null;x.silly;		
+	});
+	
+	//   console.log('\n\n\noutside:');
+	// var x=null;x.silly;
+	
+</script>
